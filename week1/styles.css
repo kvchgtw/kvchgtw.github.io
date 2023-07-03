@@ -1,0 +1,188 @@
+h1 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+.navbar 
+{
+    display: flex;
+    border: 1px solid red;
+    padding: 10px;
+  }
+  
+  .navbar-box {
+    display: flex;
+    width: 100%;
+    padding:10px;
+    color:black;
+    border: 1px solid black;
+    justify-content: flex-end
+
+    
+
+  }
+  .item 
+{
+    display: flex;
+    border: 1px solid blue;
+    padding: 10px;
+
+  }
+  .item-number
+{
+    display: flex;
+    border: 1px solid blue;
+    padding: 10px;
+
+  }
+  .nav-title
+{
+    display: flex;
+    margin-top: none;
+    margin-bottom: none;
+    border: 1px solid green;
+    padding: 10px;
+
+  }
+
+  .nav-homepage
+  {
+    border: 1px solid purple;
+    padding: 10px;
+  }
+  .nav-homepage-mywebsite
+  {
+    border: 1px solid yellowgreen;
+    padding: 10px;
+
+  }
+
+  .cover-photo
+  {
+    border: 1px solid orange;
+    padding: 10px;
+    height: 250px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cover-photo-text
+  {
+    /*border: 1px solid orange;*/
+    padding: 10px;
+    font-size: 40px;
+  }
+  .main
+  {
+    width: 1200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*.main-content
+  {
+    border: 1px solid orange;
+    padding: 10px;
+    width: 1200px;
+    height: 50px;
+    background-color: rgb(255, 119, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  */
+ 
+  @media screen and (min-width: 1201px) and (max-width: 1920px) {
+    /* 在螢幕寬度介於 1200px 和 1920px 之間時應用的樣式 */
+    .main {
+      width: 1200px;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
+    .main {
+      width: 66%;
+    }
+  }
+  @media screen and (min-width: 360px) and (max-width: 600px) {
+    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
+    .main {
+      width: 33%;
+    }
+  }
+  .homepage-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .promotion1
+  {
+    width: 400px;
+    margin-right: 10px;
+    height: 50px;
+    background-color: rgb(45, 231, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .promotion-text1
+  {
+    margin-left: 5px;
+  }
+ 
+  .promotion2
+  {
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    background-color: rgb(45, 231, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .promotion-text2
+  {
+    margin-left: 5px;
+  }
+
+  .promotion3
+  {
+    width: 400px;
+    margin-left: 10px;
+    height: 50px;
+    background-color: rgb(45, 231, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .promotion-text3
+  {
+    margin-left: 5px;
+  }
+ 
+  .promotion-image1
+  {
+    width: 80px;
+    height: 50px;
+  }
+  .promotion-image2
+  {
+    width: 80px;
+    height: 50px;
+  }.promotion-image3
+  {
+    width: 80px;
+    height: 50px;
+  }
+  
