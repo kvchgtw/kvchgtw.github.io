@@ -26,14 +26,12 @@ p {
   .item 
 {
     display: flex;
-    border: 1px solid blue;
-    padding: 10px;
-
   }
   .item-number
 {
     display: flex;
-    border: 1px solid blue;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
 
   }
@@ -77,7 +75,6 @@ p {
   }
   .main
   {
-    width: 1200px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -96,32 +93,14 @@ p {
   }
   */
  
-  @media screen and (min-width: 1201px) and (max-width: 1920px) {
-    /* 在螢幕寬度介於 1200px 和 1920px 之間時應用的樣式 */
-    .main {
-      width: 1200px;
-    }
-  }
-  @media screen and (min-width: 601px) and (max-width: 1200px) {
-    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
-    .main {
-      width: 66%;
-    }
-  }
-  @media screen and (min-width: 360px) and (max-width: 600px) {
-    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
-    .main {
-      width: 33%;
-    }
-  }
+ 
   .homepage-content
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
-    padding: 10px;
-    margin-top: 15px;
+    border: 0px solid red;
+    padding: 20px;
   }
 
   .promotion1
@@ -129,7 +108,7 @@ p {
     width: 400px;
     margin-right: 10px;
     height: 50px;
-    background-color: rgb(45, 231, 255);
+    background-color: rgb(190, 219, 255);
     display: flex;
     justify-content: left;
     align-items: center;
@@ -145,7 +124,7 @@ p {
     margin-left: 10px;
     margin-right: 10px;
     height: 50px;
-    background-color: rgb(45, 231, 255);
+    background-color: rgb(190, 219, 255);
     display: flex;
     justify-content: left;
     align-items: center;
@@ -160,7 +139,7 @@ p {
     width: 400px;
     margin-left: 10px;
     height: 50px;
-    background-color: rgb(45, 231, 255);
+    background-color: rgb(190, 219, 255);
     display: flex;
     justify-content: left;
     align-items: center;
@@ -180,9 +159,162 @@ p {
   {
     width: 80px;
     height: 50px;
-  }.promotion-image3
+  }
+  .promotion-image3
   {
     width: 80px;
     height: 50px;
   }
+
+  /* Content Grid */
+
+  .homepage-content-frame
+
+  {
+    justify-content: center;
+    display: flex
+  }
+  .content-grid-frame
+  {
+    
+    width: 1200px;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 20px;    
+    
   
+  }
+  .content-grid
+  {
+    align-items: center;
+    
+  }
+ 
+  .content-image
+  {
+    width:183px;
+    height: auto;
+  }
+
+  .content-grid-text
+  {
+    background-color: rgb(209, 250, 255);
+    text-align: center;
+
+  }
+  .content-grid-image
+  {
+    background-color: rgb(221, 166, 15);
+    margin-bottom: 0px;
+    height: 120px;
+  }
+
+  .mobile-menu-icon
+  {
+    height: 30px;
+    width: 30px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+
+  }
+
+  @media screen and (min-width: 1201px) and (max-width: 1920px) {
+    /* 在螢幕寬度介於 1200px 和 1920px 之間時應用的樣式 */
+    .mobile-menu
+   {
+    display: none;
+   }
+    
+    
+    .main {
+      width: 1200px;
+    }
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
+    
+   .mobile-menu
+   {
+    display: none;
+   }
+    
+    .main {
+      width: 66%;
+    }
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .content-grid
+    {
+      width: 22.5%;
+    }
+  }
+  @media screen and (min-width: 360px) and (max-width: 600px) {
+    /* 在螢幕寬度介於 360px 和 600px 之間時應用的樣式 */
+    .item
+    {
+      display: none;
+    }
+    
+
+    .homepage-content
+    {
+      height: 200px;
+      align-items: stretch; /*控制promotion元件垂直位置*/
+      padding: none;
+      margin: 0 auto;
+      width: 90%;
+      
+    }
+    
+    .main {
+      flex-wrap: wrap;
+
+    }
+    .promotion1
+    {
+      margin-right: 0px;
+      width: 100%;
+    }
+    .promotion2
+    {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+
+    }
+    .promotion3
+    {
+      margin-left: 0px;
+      width: 100%;
+
+    }
+
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 90%;
+    }
+    .content-grid
+    {
+      width: 100%;
+    }
+    
+    body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+  }
