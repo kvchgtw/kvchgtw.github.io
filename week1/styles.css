@@ -355,6 +355,11 @@ body
       margin-bottom: 20px;
     }
 
+    .cover-photo-text
+    {
+      text-align: center;
+    }
+
     .homepage-content
     {
       height: 220px;
