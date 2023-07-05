@@ -2,22 +2,20 @@ h1 {
     font-size: 40px;
 }
 
-p {
+body 
+{
     font-size: 20px;
 }
 .navbar 
 {
     display: flex;
-    border: 1px solid red;
-    padding: 10px;
+    padding: 5px;
   }
   
   .navbar-box {
     display: flex;
-    width: 100%;
-    padding:10px;
-    color:black;
-    border: 1px solid black;
+    width: 90%;
+    padding:0px;
     justify-content: flex-end
 
     
@@ -47,22 +45,22 @@ p {
 
   .nav-homepage
   {
-    border: 1px solid purple;
-    padding: 10px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
   }
   .nav-homepage-mywebsite
   {
-    border: 1px solid yellowgreen;
-    padding: 10px;
+    padding: 0px;
+    font-weight: 500;
+    width: 200px;
 
   }
 
   .cover-photo
   {
-    border: 1px solid orange;
-    padding: 10px;
     height: 250px;
-    background-color: lightgray;
+    background-color: rgb(190, 219, 255);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +70,7 @@ p {
     /*border: 1px solid orange;*/
     padding: 10px;
     font-size: 40px;
+    font-weight: 500;
   }
   .main
   {
@@ -100,7 +99,8 @@ p {
     justify-content: center;
     align-items: center;
     border: 0px solid red;
-    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .promotion1
@@ -181,21 +181,21 @@ p {
     justify-content: flex-start;
     background-color: rgb(255, 255, 255);
     display: flex;
-    gap: 20px;    
+    justify-content: space-between;
+
     
   
   }
   .content-grid
   {
     align-items: center;
-    
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+   
   }
  
-  .content-image
-  {
-    width:183px;
-    height: auto;
-  }
+  
 
   .content-grid-text
   {
@@ -206,8 +206,9 @@ p {
   .content-grid-image
   {
     background-color: rgb(221, 166, 15);
-    margin-bottom: 0px;
-    height: 120px;
+    width: 100%;
+    max-width: 285px;
+    height: 190px;
   }
 
   .mobile-menu-icon
@@ -221,6 +222,9 @@ p {
 
   @media screen and (min-width: 1201px) and (max-width: 1920px) {
     /* 在螢幕寬度介於 1200px 和 1920px 之間時應用的樣式 */
+   
+    
+   
     .mobile-menu
    {
     display: none;
@@ -234,6 +238,19 @@ p {
     {
       flex-wrap: wrap;
     }
+    
+    
+    .content-image
+  {
+    max-width: 100%;
+    height: auto;
+  }
+  body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
   }
   @media screen and (min-width: 601px) and (max-width: 1200px) {
     /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
@@ -243,30 +260,94 @@ p {
     display: none;
    }
     
-    .main {
-      width: 66%;
+    .main 
+    {
+      width: 100%;
+      height: 130px;
+      display: flex;
+      flex-wrap: wrap;
     }
+    .promotion1
+    {
+      margin-right: 2%;
+      width: 44%;
+    }
+    .promotion2
+    {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 44%;
+
+    }
+    .promotion3
+    {
+      
+      margin-left: 0px;
+      width: 90%;
+
+    }
+
+
+
     .content-grid-frame
     {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
+      width: 90%;
+
     }
+   
+
+
     .content-grid
     {
-      width: 22.5%;
+      width: 23.5%; /*這會影響一排展示幾個縮圖*/
+
+    }
+    
+
+    .content-image
+    {
+      max-width: 100%;
+      height: auto;
+    }
+
+
+
+    body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
     }
   }
   @media screen and (min-width: 360px) and (max-width: 600px) {
     /* 在螢幕寬度介於 360px 和 600px 之間時應用的樣式 */
+    .mobile-menu
+{
+  display: flex;
+  align-items: center;
+
+}
+
+    
+    .navbar 
+  {
+    height: 40px;
+  }
     .item
     {
       display: none;
     }
     
+    .cover-photo
+    {
+      margin-bottom: 20px;
+    }
 
     .homepage-content
     {
-      height: 200px;
+      height: 220px;
       align-items: stretch; /*控制promotion元件垂直位置*/
       padding: none;
       margin: 0 auto;
@@ -308,6 +389,11 @@ p {
     .content-grid
     {
       width: 100%;
+    }
+    .content-image
+    {
+      width: 150px;
+      height: auto;
     }
     
     body
