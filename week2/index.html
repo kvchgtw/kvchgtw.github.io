@@ -1,176 +1,175 @@
 <!DOCTYPE html>
-<html>
 <head>
-  <title>Week 2 Assignment 章廷文 Kevin</title>
-  <script>
-//Task1
-console.log("----Task1----")
-
-    function findAndPrint(messages) {
-    let names = Object.keys(messages); // 取得物件的所有鍵 Key（人名）也就是 names
-
-    for (let i = 0; i < names.length; i++) {
-    let name = names[i];  // 每一個人的人名 = name
-    let message = messages[name]; // 每一個人名對應的值 = message
-
-    // 判斷是否大於17歲
-    if (
-      message.includes("18 years old") ||
-      message.includes("college student") ||
-      message.includes("legal age in Taiwan") ||
-      message.includes("vote for Donald Trump next week")
-    ) {
-      console.log(name);
-    }
-  }
-  
-}
-
-findAndPrint({
-  "Bob": "My name is Bob. I'm 18 years old.",
-  "Mary": "Hello, glad to meet you.",
-  "Copper": "I'm a college student. Nice to meet you.",
-  "Leslie": "I am of legal age in Taiwan.",
-  "Vivian": "I will vote for Donald Trump next week",
-  "Jenny": "Good morning."
-});
-
-//Task2
-console.log("----Task2----")
-
-function calculateSumOfBonus(data) {
-  let bonusSum = 0;
-  let employees = data.employees;
-  let numEmployees = employees.length;
-
-  for (let i = 0; i < numEmployees; i++) {
-    let employee = employees[i];
-    let salary = employee.salary;
-    let performance = employee.performance;
-    let role = employee.role;
-
-    // 將薪資轉換為 TWD
-    if (typeof salary === 'string') {
-      if (salary.endsWith('USD')) {
-        salary = parseFloat(salary) * 30; // 1 USD = 30 TWD
-      } else {
-        salary = parseFloat(salary.replace(',', '')); // 移除千分位符號
-      }
-    }
-
-    // 根據薪資、表現和角色計算獎金
-    let bonus = 0;
-    if (performance === 'above average') {
-      bonus = bonus + salary * 0.05;
-    } else if (performance === 'average') {
-      bonus = bonus + salary * 0.03;
-    } else if (performance === 'below average') {
-      bonus = bonus + salary * 0.02;
-    }
-
-    if (role === 'Engineer') {
-      bonus = bonus + salary * 0.02;
-    } else if (role === 'CEO') {
-      bonus = bonus + salary * 0.01;
-    } else if (role === 'Sales') {
-      bonus = bonus + salary * 0.05;
-    }
-    // 累加獎金總和
-    bonusSum = bonusSum + bonus;
-  }
-
-  console.log('獎金總和：', bonusSum, 'TWD');
-}
-
-calculateSumOfBonus({
-  employees: [
-    {
-      name: 'John',
-      salary: '1000USD',
-      performance: 'above average',
-      role: 'Engineer'
-    },
-    {
-      name: 'Bob',
-      salary: 60000,
-      performance: 'average',
-      role: 'CEO'
-    },
-    {
-      name: 'Jenny',
-      salary: '50,000',
-      performance: 'below average',
-      role: 'Sales'
-    }
-  ]
-});
-
-//Task3
-console.log("----Task3----")
-
-function func(...data) {
-  let middleNames = {};
-
-  for (let name of data) {
-    let middleName = name[1]
-  
-    if (!middleNames[middleName]) {
-      middleNames[middleName] = {
-        count: 1,
-        fullName: name
-      };
-    } else {
-      middleNames[middleName].count++;
-    }
-  }
-
-  let uniqueMiddleName;
-
-  for (let name in middleNames) {
-    if (middleNames[name].count === 1) {
-      uniqueMiddleName = middleNames[name].fullName;
-    }
-  }
-
-  if (uniqueMiddleName) {
-    console.log(uniqueMiddleName);
-  } else {
-    console.log("沒有");
-  }
-}
-
-func("彭大牆", "王明雅", "吳明"); // print 彭大牆
-func("郭靜雅", "王立強", "林靜宜", "郭立恆", "林花花"); // print 林花花
-func("郭宣雅", "林靜宜", "郭宣恆", "林靜花"); // print 沒有
-
-
-
-//Task4
-console.log("----Task4----")
-
-function getNumber(index){
-
-  if (index === 0){
-    console.log(0)
-  }
-  else if (index != 0 && index%2 !=0)//奇數
-  {
-    console.log(4+(Math.floor(index/2))*3)
-  }
-  else {
-    console.log(3*(index/2)) //偶數
-  }
-
-}
-
-getNumber(1); // print 4 
-getNumber(5); // print 10 
-getNumber(10); // print 15
-
-
-  </script>
+    <meta charset="UTF-8">
+    <title>WeHelp Week2 Assignment Kevin</title>
 </head>
 <body>
- 
+    <script>
+        //Task1
+        console.log("----Task1----")
+        
+            function findAndPrint(messages) {
+            let names = Object.keys(messages); // 取得物件的所有鍵 Key（人名）也就是 names
+        
+            for (let i = 0; i < names.length; i++) {
+            let name = names[i];  // 每一個人的人名 = name
+            let message = messages[name]; // 每一個人名對應的值 = message
+        
+            // 判斷是否大於17歲
+            if (
+              message.includes("18 years old") ||
+              message.includes("college student") ||
+              message.includes("legal age in Taiwan") ||
+              message.includes("vote for Donald Trump next week")
+            ) {
+              console.log(name);
+            }
+          }
+          
+        }
+        
+        findAndPrint({
+          "Bob": "My name is Bob. I'm 18 years old.",
+          "Mary": "Hello, glad to meet you.",
+          "Copper": "I'm a college student. Nice to meet you.",
+          "Leslie": "I am of legal age in Taiwan.",
+          "Vivian": "I will vote for Donald Trump next week",
+          "Jenny": "Good morning."
+        });
+        
+        //Task2
+        console.log("----Task2----")
+        
+        function calculateSumOfBonus(data) {
+          let bonusSum = 0;
+          let employees = data.employees;
+          let numEmployees = employees.length;
+        
+          for (let i = 0; i < numEmployees; i++) {
+            let employee = employees[i];
+            let salary = employee.salary;
+            let performance = employee.performance;
+            let role = employee.role;
+        
+            // 將薪資轉換為 TWD
+            if (typeof salary === 'string') {
+              if (salary.endsWith('USD')) {
+                salary = parseFloat(salary) * 30; // 1 USD = 30 TWD
+              } else {
+                salary = parseFloat(salary.replace(',', '')); // 移除千分位符號
+              }
+            }
+        
+            // 根據薪資、表現和角色計算獎金
+            let bonus = 0;
+            if (performance === 'above average') {
+              bonus = bonus + salary * 0.05;
+            } else if (performance === 'average') {
+              bonus = bonus + salary * 0.03;
+            } else if (performance === 'below average') {
+              bonus = bonus + salary * 0.02;
+            }
+        
+            if (role === 'Engineer') {
+              bonus = bonus + salary * 0.02;
+            } else if (role === 'CEO') {
+              bonus = bonus + salary * 0.01;
+            } else if (role === 'Sales') {
+              bonus = bonus + salary * 0.05;
+            }
+            // 累加獎金總和
+            bonusSum = bonusSum + bonus;
+          }
+        
+          console.log('獎金總和：', bonusSum, 'TWD');
+        }
+        
+        calculateSumOfBonus({
+          employees: [
+            {
+              name: 'John',
+              salary: '1000USD',
+              performance: 'above average',
+              role: 'Engineer'
+            },
+            {
+              name: 'Bob',
+              salary: 60000,
+              performance: 'average',
+              role: 'CEO'
+            },
+            {
+              name: 'Jenny',
+              salary: '50,000',
+              performance: 'below average',
+              role: 'Sales'
+            }
+          ]
+        });
+        
+        //Task3
+        console.log("----Task3----")
+        
+        function func(...data) {
+          let middleNames = {};
+        
+          for (let name of data) {
+            let middleName = name[1]
+          
+            if (!middleNames[middleName]) {
+              middleNames[middleName] = {
+                count: 1,
+                fullName: name
+              };
+            } else {
+              middleNames[middleName].count++;
+            }
+          }
+        
+          let uniqueMiddleName;
+        
+          for (let name in middleNames) {
+            if (middleNames[name].count === 1) {
+              uniqueMiddleName = middleNames[name].fullName;
+            }
+          }
+        
+          if (uniqueMiddleName) {
+            console.log(uniqueMiddleName);
+          } else {
+            console.log("沒有");
+          }
+        }
+        
+        func("彭大牆", "王明雅", "吳明"); // print 彭大牆
+        func("郭靜雅", "王立強", "林靜宜", "郭立恆", "林花花"); // print 林花花
+        func("郭宣雅", "林靜宜", "郭宣恆", "林靜花"); // print 沒有
+        
+        
+        
+        //Task4
+        console.log("----Task4----")
+        
+        function getNumber(index){
+        
+          if (index === 0){
+            console.log(0)
+          }
+          else if (index != 0 && index%2 !=0)//奇數
+          {
+            console.log(4+(Math.floor(index/2))*3)
+          }
+          else {
+            console.log(3*(index/2)) //偶數
+          }
+        
+        }
+        
+        getNumber(1); // print 4 
+        getNumber(5); // print 10 
+        getNumber(10); // print 15
+        
+        
+          </script>
 </body>
 </html>
