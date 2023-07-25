@@ -1,0 +1,554 @@
+h1 {
+    font-size: 40px;
+}
+
+body 
+{
+    font-size: 20px;
+}
+.navbar 
+{
+    display: flex;
+    padding: 5px;
+  }
+  
+  .navbar-box {
+    display: flex;
+    width: 90%;
+    padding:0px;
+    justify-content: flex-end
+
+    
+
+  }
+  .item 
+{
+    display: flex;
+  }
+  .item-number
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+  }
+  .nav-title
+{
+    display: flex;
+    margin-top: none;
+    margin-bottom: none;
+    border: 1px solid green;
+    padding: 10px;
+
+  }
+
+  .nav-homepage
+  {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-homepage-mywebsite
+  {
+    padding: 0px;
+    font-weight: 500;
+    width: 200px;
+
+  }
+
+  .cover-photo
+  {
+    height: 250px;
+    background-color: rgb(190, 219, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cover-photo-text
+  {
+    /*border: 1px solid orange;*/
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .main
+  {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*.main-content
+  {
+    border: 1px solid orange;
+    padding: 10px;
+    width: 1200px;
+    height: 50px;
+    background-color: rgb(255, 119, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  */
+ 
+ 
+  .homepage-content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid red;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .promotion1
+  {
+    width: 400px;
+    margin-right: 10px;
+    height: 50px;
+    background-color: rgb(190, 219, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .promotion-text1
+  {
+    margin-left: 5px;
+  }
+ 
+  .promotion2
+  {
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    background-color: rgb(190, 219, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .promotion-text2
+  {
+    margin-left: 5px;
+  }
+
+  .promotion3
+  {
+    width: 400px;
+    margin-left: 10px;
+    height: 50px;
+    background-color: rgb(190, 219, 255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .promotion-text3
+  {
+    margin-left: 5px;
+  }
+  
+  .promotion-0
+  {
+    object-fit: cover;
+    width: 80px;
+    height: 50px;
+  }
+  .promotion-image1
+  {
+    object-fit: cover;
+    width: 80px;
+    height: 50px;
+  }
+  .promotion-image2
+  {
+    width: 80px;
+    height: 50px;
+  }
+  .promotion-image3
+  {
+    width: 80px;
+    height: 50px;
+  }
+
+  /* Content Grid */
+
+  .homepage-content-frame
+
+  {
+    justify-content: center;
+    display: flex
+  }
+  .content-grid-frame
+  {
+    
+    width: 1200px;
+    justify-content: flex-start;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+
+    
+  
+  }
+  .content-grid
+  {
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+   
+  }
+ 
+  
+
+  .content-grid-text
+  {
+    background-color: rgb(190, 219, 255);
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+    /*position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0; 
+    background-color: rgba(223, 223, 223, 0.5);*/
+   
+    color: rgb(0, 0, 0);
+
+  }
+  .content-grid-image
+  {
+    background-color: rgb(221, 166, 15);
+    width: 100%;
+    max-width: 285px;
+    position:relative;
+    
+
+
+  }
+
+  .star
+  {
+    width: 25px;
+    height: 25px;
+    background-image: url("image/star.png");
+    background-size: cover;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+  }
+
+  .mobile-menu-icon
+  {
+    height: 30px;
+    width: 30px;
+    margin-top: 50%;
+    margin-bottom: 50%;
+
+  }
+
+  @media screen and (min-width: 1201px) and (max-width: 1920px) {
+    /* 在螢幕寬度介於 1200px 和 1920px 之間時應用的樣式 */
+   
+   
+    .content-grid-text
+  {
+    height:55px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex: auto;
+
+  }
+   
+    .mobile-menu
+   {
+    display: none;
+   }
+    
+    
+    .main {
+      width: 1200px;
+    }
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+    }
+    .content-grid
+    {
+      width: 183.3px; /*這會影響一排展示幾個縮圖*/
+      height: auto
+      
+
+    }
+    
+    .content-image
+  {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+
+    .mobile-menu-list
+    {
+      display:none;
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 999;
+    }  
+  }
+  body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* 在螢幕寬度介於 600px 和 1200px 之間時應用的樣式 */
+    
+    body 
+    {
+        font-size: 15.5px;
+    }
+
+   .mobile-menu
+   {
+    display: none;
+   }
+    
+    .main 
+    {
+      width: 100%;
+      height: 130px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .promotion1
+    {
+      margin-right: 2%;
+      width: 44%;
+    }
+    .promotion2
+    {
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 44%;
+
+    }
+    .promotion3
+    {
+      
+      margin-left: 0px;
+      width: 90%;
+
+    }
+
+
+
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 90%;
+
+    }
+
+   
+   
+
+
+    .content-grid
+    {
+      width: 23.5%; /*這會影響一排展示幾個縮圖*/
+      height: auto;
+     
+
+    }
+    
+    .content-grid-image
+
+    {
+      height: auto;
+    }
+
+    .content-image
+    {
+      display:block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+
+    }
+
+    
+
+    .content-grid-text
+    {
+      height:55px;
+      display: flex;
+      flex: auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+  
+    }
+
+    .mobile-menu-list
+    {
+      display:none;
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 999;
+    }
+
+    body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  @media screen and (min-width: 360px) and (max-width: 600px) {
+    /* 在螢幕寬度介於 360px 和 600px 之間時應用的樣式 */
+    .mobile-menu
+{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+    
+    .navbar 
+  {
+    height: 40px;
+  }
+    .item
+    {
+      display: none;
+    }
+    
+    .cover-photo
+    {
+      margin-bottom: 20px;
+    }
+
+    .cover-photo-text
+    {
+      text-align: center;
+    }
+
+    .homepage-content
+    {
+      height: 220px;
+      align-items: stretch; /*控制promotion元件垂直位置*/
+      padding: none;
+      margin: 0 auto;
+      width: 90%;
+      
+    }
+    
+    .main {
+      flex-wrap: wrap;
+
+    }
+    .promotion1
+    {
+      margin-right: 0px;
+      width: 100%;
+    }
+    .promotion2
+    {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+
+    }
+    .promotion3
+    {
+      margin-left: 0px;
+      width: 100%;
+
+    }
+
+    .content-grid-frame
+    {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 90%;
+    }
+    .content-grid
+    {
+      width: 100%;
+    }
+
+    .content-grid-image
+
+    {
+      max-width: 100%;
+      
+      
+    }
+
+    .content-image
+    {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+
+      
+    }
+    
+    body
+    {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .mobile-menu-list
+    {
+      display:none;
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 999;
+    }
+    .overlay 
+    {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 998;
+    }
+
+    
+
+  }
