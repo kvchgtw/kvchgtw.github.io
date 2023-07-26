@@ -15,7 +15,7 @@ with open("attractions.csv", "w", encoding = "utf-8") as file:
     pattern =  r'(https?://[^\s]+)'
     
     for i in list:
-            jpgList = re.findall(pattern,i["file"].replace("jpghttp","jpg http")) #先把file中jpghttp取代為jpg http，然後比對正則，讓url被分割出來，然後就可以用index叫出第一組url
+            jpgList = re.findall(pattern,i["file"].lower().replace("jpghttp","jpg http")) #先把file中jpghttp取代為jpg http，然後比對正則，讓url被分割出來，然後就可以用index叫出第一組url
             file.write(i["stitle"]+","+i["address"][5:8]+","+i["longitude"]+","+i["latitude"]+","+jpgList[0]+"\n") #寫入.csv
        
 

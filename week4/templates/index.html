@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>會員系統</title>
+    <title>會員系統Homepage</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+.body
+{
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+.frame
+{
+    display: block;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.title
+{
+    text-align: center;
+}
+.form
+{
+    text-align: center;
+}
+    </style>
+
 </head>
 <body>
-    <h2>會員系統首頁</h2>
-    <div>Welcome!</div>
+<div class="frame">
+            <div class="title">
+                <h2>會員系統首頁</h2>
+    </div>    
+        <div class="form">
+            <form>
+                <label for="username">帳號:</label>
+                <input type="text" id="username" name="username" ><br>
+    
+                <label for="password">密碼:</label>
+                <input type="password" id="password" name="password" ><br>
+                <label>
+                    <input type="checkbox" id="agreeCheckbox" name="agree">
+                    我同意使用者條款
+                </label>
+                <div>
+
+                </div>
+                    <input type="submit" value="登入" onclick="checkAgreement()">
+            </form>
+        </div>
+
+ </div>
+        <script>
+            function checkAgreement() {
+                let agreeCheckbox = document.getElementById("agreeCheckbox");
+        
+                if (!agreeCheckbox.checked) {
+                    alert("請同意使用者條款！");
+                    // 阻止表單提交
+                    return false;
+                }
+        
+                // 核取方塊已經被選中，可以提交表單
+                return true;
+            }
+        </script>
+        
+    
 </body>
 </html>
