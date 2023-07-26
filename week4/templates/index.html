@@ -6,11 +6,20 @@
     <title>會員系統Homepage</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
-.body
+h2
 {
-    margin-top: 50%;
-    margin-bottom: 50%;
+    background-color: rgb(191, 255, 255);
 }
+body
+{
+    width: 100%;
+    margin: 0px;
+}
+html
+{
+    width:100%
+}
+
 .frame
 {
     display: block;
@@ -21,7 +30,22 @@
 
 .title
 {
+    display:flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 253, 247);
+    height: 80px;
+    margin-bottom: 20px;
+    
+}
+
+.title-text
+{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
 }
 .form
 {
@@ -33,10 +57,12 @@
 <body>
 <div class="frame">
             <div class="title">
-                <h2>會員系統首頁</h2>
-    </div>    
-        <div class="form">
-            <form>
+                <div class="title-text">
+                    會員系統首頁
+                </div>
+            </div>    
+        <div class="form" >
+            <form action="/signin" method = "POST" onsubmit="return checkAgreement()">
                 <label for="username">帳號:</label>
                 <input type="text" id="username" name="username" ><br>
     
@@ -47,9 +73,12 @@
                     我同意使用者條款
                 </label>
                 <div>
+                <br>
 
                 </div>
-                    <input type="submit" value="登入" onclick="checkAgreement()">
+                    <button onclick="checkAgreement()">
+                        登入
+                    </button>
             </form>
         </div>
 
@@ -61,6 +90,7 @@
                 if (!agreeCheckbox.checked) {
                     alert("請同意使用者條款！");
                     // 阻止表單提交
+                    event.preventDefault();
                     return false;
                 }
         
