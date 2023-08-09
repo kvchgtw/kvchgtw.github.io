@@ -16,3 +16,18 @@
 
 ![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task3/07.png)
 
+## Task 4
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task4/01.png)
+
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task4/02.png)
+
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task4/03.png)
+
+
+## Task 5
+
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task5/01.png)
+
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task5/02.png)
+
+![image](https://github.com/kvchgtw/kvchgtw.github.io/blob/main/week5/img/Task5/03.png)
