@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員頁面</title>
+    <style>
+        h2
+        {
+            text-align: center;
+        }
+        .msg
+        {
+            text-align: center;
+
+        }
+        .message-form
+{
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <h2>會員頁面</h2>
+    
+    <div class="msg"> {{name}}，你好，歡迎光臨！</div>
+    <br>
+    <div class="msg"><a href = "/signout">登出</a></div>
+    <hr>
+    <div class="message-form">
+    <h3>快來留言吧</h3>
+    <form action="/createMessage" method = "POST">
+        <label for="content">內容</label>
+        <input type="text" id="content" name="content" ><br>
+        <br>
+        <button type = "submit">送出</button>
+    </form>
+    <hr>
+    <div class="message-display">
+        <h3>留言區</h3>
+        {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+    </div>
+</div>
+</body>
+</html>
