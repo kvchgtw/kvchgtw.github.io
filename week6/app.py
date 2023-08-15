@@ -162,9 +162,7 @@ def createMessage():
                 cursor.execute("INSERT INTO message (member_id, content) VALUES (%s, %s)", (existing_id,content))
                 con.commit()
                 cursor.execute("SELECT username, content FROM `member` INNER JOIN message ON `member`.id=message.member_id;")
-                messageRecord = cursor.fetchall()
-                print(messageRecord)
-                return redirect("/member")
+                
 
 
         finally:
