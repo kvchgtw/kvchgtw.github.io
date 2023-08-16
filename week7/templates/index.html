@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統Homepage</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+h2
+{
+    background-color: rgb(191, 255, 255);
+}
+body
+{
+    width: 100%;
+    margin: 0px;
+}
+html
+{
+    width:100%
+}
+
+.frame
+{
+    display: block;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.title
+{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(187, 253, 247);
+    height: 80px;
+    margin-bottom: 20px;
+    
+}
+
+.title-text
+{
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+}
+.sign-up-form
+{
+    text-align: center;
+}
+.sign-in-form
+{
+    text-align: center;
+}
+    </style>
+
+</head>
+<body>
+<div class="frame">
+            <div class="title">
+                <div class="title-text">
+                    會員系統首頁
+                </div>
+            </div>
+            <div class="sign-up-form" >
+                <h3>
+                    新會員註冊   
+                   </h3>    
+                <form action="/signup" method = "POST" onsubmit="return checkSignup();">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="sign-up-name" name="name" ><br>
+                    <label for="username">帳號:</label>
+                    <input type="text" id="sign-up-username" name="username" ><br>
+                    <label for="password">密碼:</label>
+                    <input type="password" id="sign-up-password" name="password" ><br>
+                    <div>
+                    <br>
+    
+                    </div>
+                        <button type = "submit">
+                            註冊
+                        </button>
+                </form>
+                <br>
+                <hr>
+            <h3>
+             登入系統   
+            </h3>    
+            </div>        
+        <div class="sign-in-form" >
+            <form action="/signin" method = "POST" onsubmit="return checkSignin();">
+                <label for="username">帳號:</label>
+                <input type="text" id="sign-in-username" name="username" ><br>
+    
+                <label for="password">密碼:</label>
+                <input type="password" id="sign-in-password" name="password" ><br>
+               
+                <div>
+                <br>
+
+                </div>
+                    <button type = "submit">
+                        登入
+                    </button>
+            </form>
+        </div>
+
+ </div>
+        <script>
+            function checkSignup() {
+                let nameInput = document.getElementById("sign-up-name").value;
+                let usernameInput = document.getElementById("sign-up-username").value;
+                let passwordInput = document.getElementById("sign-up-password").value;
+
+       
+                
+                if (nameInput === "" || usernameInput === ""|| passwordInput ==="") {
+                    alert("請填寫姓名、帳號與密碼");
+                    // 阻止表單提交
+                    return false;
+                }
+        
+                // 核取方塊已經被選中，可以提交表單
+                return true;
+            }
+
+            function checkSignin() {
+                let usernameInputSignin = document.getElementById("sign-in-username").value;
+                let passwordInputSignin = document.getElementById("sign-in-password").value;
+                if (usernameInputSignin === ""|| passwordInputSignin ==="") {
+                    alert("請填寫帳號與密碼");
+                    // 阻止表單提交
+                    return false;
+                }
+        
+                return true;
+            }
+        </script>
+        
+    
+</body>
+</html>

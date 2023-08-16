@@ -18,6 +18,11 @@ app.secret_key="any string but secret"
 def index(): #用來回應網站首頁連線的函式
     return render_template("index.html")   #回傳的內容
 
+@app.route("/api/member")
+def apiMember(): #用來回應網站首頁連線的函式
+    data = request.args.
+    return render_template("index.html")   #回傳的內容
+
 
 #啟動網站伺服器可透過 port 指定埠號
 @app.route("/member")
@@ -58,6 +63,7 @@ def member():
                 con.close()
     else:  
         return redirect("/")
+    
     
 
             
@@ -162,8 +168,6 @@ def createMessage():
                 cursor.execute("INSERT INTO message (member_id, content) VALUES (%s, %s)", (existing_id,content))
                 con.commit()
                 cursor.execute("SELECT username, content FROM `member` INNER JOIN message ON `member`.id=message.member_id;")
-                return redirect("/member")
-
                 
 
 
