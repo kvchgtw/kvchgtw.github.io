@@ -22,21 +22,105 @@
 </head>
 <body>
     <h2>會員頁面</h2>
-    
-    <div class="msg"> {{name}}，你好，歡迎光臨！</div>
+    <div id="welcome" class="msg"> {{name}}，你好，歡迎光臨！</div>
     <br>
     <div class="msg"><a href = "/signout">登出</a></div>
     <hr>
-    <div class="message-form">
-    <h3>查詢會員姓名</h3>
-    <form action="/createMessage" method = "POST">
+    <form>
+        <div class="message-form">
+        <h3>查詢會員姓名</h3>
         <label for="content"></label>
         <input type="text" id="username" name="username" >
-        <button type = "submit">查詢</button>
+        <button id="button" type = "button">查詢</button>
         <br>
-        
     </form>
-    
+    <br>
+    <div id="result"></div>
+    <br>
+    <form>
+        <div class="message-form">
+        <h3>更新我的姓名</h3>
+        <label for="content"></label>
+        <input type="text" id="myUsername" name="myUsername" >
+        <button id="updateButton" type = "button">更新</button>
+        <br>
+    </form>
+    <br>
+    <div id="updateResult"></div>
 </div>
+<script>
+
+document.getElementById("button").onclick = getData
+document.getElementById("updateButton").onclick = updateData
+
+document.getElementById("username").addEventListener("keydown", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        getData();
+    }
+});
+
+document.getElementById("myUsername").addEventListener("keydown", function(event){
+    if (event.key === "Enter"){
+        event.preventDefault();
+        updateData();
+    }
+});
+    
+function getData(){
+    //用fetch連線並取得資料
+    let usernameInput = document.getElementById("username").value;
+    let apiurl = "http://127.0.0.1:3000/api/member?username=";
+    let url = `${apiurl}${usernameInput}`;
+    fetch(url).then(function(response){
+        return response.json();
+    }).then(function(data){    
+        let result = data.data;
+        let queryResult = document.getElementById("result");
+        if (result === null){
+            queryResult.innerHTML = "查無此人。請輸入已註冊的帳號並重新查詢。";
+        }
+        else {
+        queryResult.innerHTML = `${result.name} (${result.username})`;
+        }
+    });
+    
+}
+
+function updateData(){
+    //把用戶輸入的字串，傳回給endpoint
+    let url = 'http://127.0.0.1:3000/api/member';
+    let updateName = document.getElementById("myUsername").value;
+    let data = {
+        name: updateName
+    };
+
+    fetch(url, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        let updateResult=document.getElementById("updateResult")
+        if (data.ok) {
+            // 更新成功，進行相應處理
+            updateResult.innerHTML ="更新成功";
+            let nameElement = document.getElementById("welcome");
+            nameElement.innerHTML = `${updateName}，你好，歡迎光臨！`;
+        } else {
+            // 更新失敗，進行相應處理
+            let updateResult = document.getElementById("updateResult");
+            updateResult.innerHTML = "更新失敗";
+        }
+    })
+    
+}
+
+
+</script>
 </body>
+
 </html>
